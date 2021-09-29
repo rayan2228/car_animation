@@ -1,0 +1,45 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?17516b540181d966ee65e0a52a252c1e") format("truetype"),
+url("./flaticon.woff?17516b540181d966ee65e0a52a252c1e") format("woff"),
+url("./flaticon.woff2?17516b540181d966ee65e0a52a252c1e") format("woff2"),
+url("./flaticon.eot?17516b540181d966ee65e0a52a252c1e#iefix") format("embedded-opentype"),
+url("./flaticon.svg?17516b540181d966ee65e0a52a252c1e#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "cloud": "\f101",
+    "moon": "\f102",
+    "car": "\f103",
+    "tree-silhouette": "\f104",
+    "mountain": "\f105",
+);
+
+.flaticon-cloud:before {
+    content: map-get($flaticon-map, "cloud");
+}
+.flaticon-moon:before {
+    content: map-get($flaticon-map, "moon");
+}
+.flaticon-car:before {
+    content: map-get($flaticon-map, "car");
+}
+.flaticon-tree-silhouette:before {
+    content: map-get($flaticon-map, "tree-silhouette");
+}
+.flaticon-mountain:before {
+    content: map-get($flaticon-map, "mountain");
+}

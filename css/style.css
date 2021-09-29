@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #334756;
+}
+
+.main {
+    width: 700px;
+    height: 500px;
+    background-color: rgb(238, 237, 237);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all linear .4s;
+}
+
+.night{
+    background-color: rgb(32, 32, 32);
+}
+
+.main .sun {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    box-shadow: 0px 0px 80px 40px rgba(244, 255, 28, 0.85);
+    z-index: 3;
+    transition: all linear .4s;
+}
+.sun_night{
+    opacity: 0;
+}
+.flaticon-moon{
+    opacity: 0;
+    font-size: 50px;
+    color: rgb(250, 250, 250);
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.main .road {
+    background-color: #212121;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.main .road::after {
+    content: "";
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 50%, #fff 50%, #fff 100%);
+    background-size: 55px;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation: road .3s linear infinite;
+}
+
+@keyframes road {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: -100px;
+    }
+}
+
+.main .road::before {
+    content: "";
+    width: 100%;
+    height: 15px;
+    background: #0d9e0d;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.main .tree {
+    z-index: 1;
+    position: absolute;
+    color: #6ECB63;
+    font-size: 50px;
+    bottom: 145px;
+    left: 0px;
+    width: 1000px;
+    animation: tree .6s linear infinite;
+}
+
+.main .tree i {
+    margin: 0px 20px;
+}
+
+@keyframes tree {
+    0% {
+        left: 20px;
+    }
+
+    100% {
+        left: -200px;
+    }
+}
+
+.flaticon-car {
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    z-index: 1;
+    color: rgb(250, 250, 250);
+    font-size: 200px;
+    animation: car .2s linear infinite;
+}
+
+@keyframes car {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-1px);
+    }
+}
+
+.main .cloud {
+    position: absolute;
+    color: #ffffff;
+    font-size: 150px;
+    top: 0px;
+    left: 0px;
+    width: 1000px;
+    animation: cloud .6s linear infinite;
+}
+
+.main .cloud i {
+    margin: 0px 20px;
+}
+
+@keyframes cloud {
+    0% {
+        left: 20px;
+    }
+
+    100% {
+        left: -200px;
+    }
+}
+
+.main .mountain {
+    z-index: 1;
+    position: absolute;
+    color: #979797;
+    font-size: 118px;
+    bottom: 108px;
+    left: 0px;
+    width: 1000px;
+    animation: mountain 2s linear infinite;
+}
+
+.main .mountain .last{
+    font-size: 110px;
+}
+
+.mountain_night{
+    color: #fff !important;
+    transition: all linear .4s;
+}
+
+@keyframes mountain {
+    0% {
+        left: 20px;
+    }
+
+    100% {
+        left: -100px;
+    }
+}
+
+@media (min-width:320px) and (max-width:575px){
+    .main{
+        width: 310px;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    .main{
+        width: 560px;
+    }
+}
